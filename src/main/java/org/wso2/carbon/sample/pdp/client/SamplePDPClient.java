@@ -21,14 +21,12 @@ import java.util.Properties;
 
 public class SamplePDPClient {
 
-
     private static String serverURL;
     private static String userName;
     private static String password;
     private static String trustStorePath;
     private static String trustStorePassword;
     private static String xacmlRequestFilePath;
-
 
     private static void loadConfigurations() {
 
@@ -105,11 +103,9 @@ public class SamplePDPClient {
         } catch (IOException e) {
             e.printStackTrace();
         }
-
     }
 
     private static String readRequestFromFile(String path) throws IOException {
-
         byte[] encoded = Files.readAllBytes(Paths.get(path));
         return new String(encoded);
     }
